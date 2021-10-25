@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <title>Library</title>
+    </head>
+
+    <body>
+
+        <header>
+            <div id="titleDiv">
+                <h1>Library</h1>
+            </div>
+            <div id="btnDiv">
+                <button class="headerBtn" id="addBookBtn">Add book</button>
+                <button class="headerBtn" id="clearAllBtn">Clear all</button>
+            </div>          
+        </header>
+        
+        <main>
+            <div class="modalDiv" id="addBookModal">
+                <form class="modalForm" id="addBookForm">
+                    <span class="closeFormSpan" id="closeAddBookFormSpan">&times;</span><br><br>
+                    <div id='formInput'>
+                        <label for="title">Title:</label><br>
+                        <input type="text" id="title" name="title" placeholder="Homer, I Hardly Knew Me" maxlength="60"required /><br><br>
+                        <label for="author">Author:</label><br>
+                        <input type="text" id="author" name="author" placeholder="Homer Simpson" maxlength="60" required /><br><br>
+                        <label for="pages">Number of pages:</label><br>
+                        <input type="text" id="pages" name="pages" placeholder="93" required /><br><br>
+                        <label for="hasBeenRead">Has this book been read?</label><br>
+                        <input type="radio" id="hasBeenReadYes" name="hasBeenRead" value="Yes">
+                        <label for="hasBeenReadYes">Yes</label><br>
+                        <input type="radio" id="hasBeenReadNo" name="hasBeenRead" value="No">
+                        <label for="hasBeenReadNo">No</label><br><br>
+                        <input type="submit" id="addBookSubmitBtn" name="addBookSubmit" value="Submit">
+                    </div>
+                </form>
+            </div>
+            <div class="modalDiv" id="clearAllModal">
+                <form class="modalForm" id="clearAllForm">
+                    <span class="closeFormSpan" id="closeClearAllFormSpan">&times;</span><br><br>
+                    <div id='formInput'>
+                        <label for="clearAll">This will delete all the books in the library. Are you sure?</label><br><br>
+                        <input type="radio" id="clearAllYes" name="shouldProceedWithClearAll" value="Yes">
+                        <label for="clearAllYes">Yes</label><br>
+                        <input type="radio" id="clearAllNo" name="shouldProceedWithClearAll" value="No">
+                        <label for="clearAllNo">No</label><br><br>
+                        <input type="submit" id="clearAllSubmitBtn" name="clearAllSubmit" value="Submit">
+                    </div>
+                </form>
+            </div>
+            <div id="libDiv"></div>
+        </main>
+
+    </body>
+</html>
